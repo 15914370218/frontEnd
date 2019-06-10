@@ -1,0 +1,49 @@
+https://www.npmjs.cn/troubleshooting/common-errors/
+npm基于node node安装好了之后npm就能使用了  npm就是node的包管理工具 
+npm init 创建一个package.json文件
+npm init --yes
+
+package.json:
+	name:当前文件夹得名字
+	version 版本
+	main:index.js入口文件
+	dependencies:这个是生产环境的依赖
+	devDependencies:这个是开发和测试需要的依赖
+	
+向package.json添加依赖项有更简单的方式就是从命令行
+
+npm install <package_name> --save 这个会在dependencies中出现
+npm install <package_name> --save-dev 这个会在devDenpendencies中出现
+
+npm instal 这个命令回去查看dependencied列出的依赖项进行安装
+
+npm update命令 更新本地安装的包
+npm uninstall <package> 卸载本地安装的包
+npm install lodash
+npm uninstall --save lodash
+npm uninstall --save-dev lodash 卸载完之后可以去node_modules目录下查看是否还存在lodash目录
+全局安装 npm install -g jshint
+
+如何创建node.js模块
+node.js模块是一种可以发布到npm的包，当你创建一个新模块时，创建package.json文件是第一步
+发布 npm publish
+
+什么是模块
+	模块是任何可以让node.js程序通过require()加载的东西
+	1）package.json文件中main字段对应的值
+	2）一个文件有一个index.js文件在里面
+	3）js文件
+	
+命令行：
+	npm access 设置包的访问级别
+	npm adduser 用户登录
+	npm bin 列出npm安装可执行文件的文件加
+	npm build 构建一个包
+	npm bundle 1.0版本已经删除了 使用了npm install 代替 npm bundle
+	npm cache 管理模块的缓存
+	npm run-script 别名 npm run 
+	
+	
+
+
+	
