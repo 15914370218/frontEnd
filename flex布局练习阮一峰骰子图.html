@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<div class="main">
+			<div>
+				<div></div>
+			</div>
+			<div class="container2">
+				<div></div>
+			</div>
+			<div class="container3">
+				<div></div>
+			</div>
+			<div class="container4">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="container5">
+				<div style="align-self:flex-end;"></div>
+				<div style="align-self:flex-end;"></div>
+			</div>
+			<div>
+				<div></div>
+				<div style="align-self:center;"></div>
+				<div style="align-self:flex-end;"></div>
+			</div>
+			<div class="container7">
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+				<div style="align-self:center;"></div>
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="container8">
+				<div></div>
+			</div>
+			<div class="container8">
+				<div style="align-self:center;"></div>
+			</div>
+			<div class="container8">
+				<div style="align-self:flex-end;"></div>
+			</div>
+			<div class="container9">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="container10">
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="container11">
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="container11">
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="container12">
+				<div></div>
+			</div>
+			<div class="container12">
+				<div style="align-self:center"></div>
+			</div>
+			<div class="container12">
+				<div style="align-self:flex-end"></div>
+			</div>
+			<div class="container13">
+				<div ></div>
+				<div style="align-self:center"></div>
+			</div>
+			<div class="container13">
+				<div ></div>
+				<div style="align-self:flex-end"></div>
+			</div>
+			<div class="container14">
+				<div ></div>
+				<div style="align-self:flex-end"></div>
+			</div>
+			<div class="container14">
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+				<div style="align-self:center;"></div>
+				<div class="div1">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style>
+		.main {
+			width: 750px;
+			height:350px;
+			margin:100px auto;
+			display: flex;
+			flex-wrap:wrap;
+			justify-content: space-between;
+		}
+		.main>div{
+			display: flex;
+			width: 100px;
+			height: 100px;
+			background: #323232;
+			border-radius: 5px;
+		}
+
+		div {
+			width: 30px;
+			height: 30px;
+			background: #fff;
+			border-radius: 50%;
+		}
+
+		.container2 {
+			justify-content: center;
+		}
+
+		.container3 {
+			flex-direction: row-reverse;
+		}
+
+		.container4 {
+			justify-content: space-between;
+		}
+
+		.container5 {
+			flex-direction: column-reverse;
+			justify-content: space-between;
+		}
+		
+		.container7{
+			flex-direction:column;
+			justify-content:space-between;
+			flex-warp:wrap;
+		}
+		
+		.container7>.div1{
+			width:100%;
+			height:30px;
+			background: #323232;
+			display:flex;
+			justify-content:space-between
+		}
+		
+		.container8{
+			flex-direction:column;
+			justify-content:center;
+		}
+		
+		.container9{
+			flex-direction:column;
+			justify-content:space-between;
+		}
+		
+		.container10{
+			flex-direction:column-reverse;
+		}
+		
+		.container10>.div1{
+			height:30px;
+			width:100%;
+			background:#323232;
+			display:flex;
+			justify-content:space-between;
+		}
+		
+		.container11{
+			flex-direction:column;
+			justify-content:space-between;
+		}
+		
+		.container11>.div1{
+			height:30px;
+			width:100%;
+			background:#323232;
+			display:flex;
+			justify-content:space-between;
+		}
+		
+		.container12{
+			flex-direction:column-reverse;
+		}
+		
+		.container13{
+			flex-direction:column;
+		}
+		
+		.container14{
+			flex-direction:column;
+			justify-content:space-between;
+		}
+		
+		.container14>.div1{
+			height:30px;
+			width:100%;
+			background:#323232;
+			display:flex;
+			justify-content:space-between;
+		}
+	</style>
+</html>
