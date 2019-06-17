@@ -1,0 +1,6 @@
+不要使用alert 因为alert会阻塞UI和javaScript的执行，必须点击'OK'按钮才能继续。
+console.log  如果打印的是一个引用类型（比如数组和自定义对象）的对象的时候，树出结果可能并不是执行console.log()
+console.dir 有时候我们想要查看一个DOM对象里面到底有什么属性和方法，但是常规的console.log打印出来的知识HTML标签。这样的结果和审查元素没有区别 这个时候就可以使用console.dir方法打印出来
+console.table 有时候获取一个用户列表，每隔用户有很多属性，但是我们只想查看其中的某些属性
+console.time  这样获取一段代码的性能或者一个异步方法需要运行多久，这时候需要用到定时器
+使用debugger 有时候需要去javascript找到源码 这样很麻烦 可以直接使用debugger关键字，直接在源码的地方定义断点
