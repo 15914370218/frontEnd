@@ -1,1 +1,54 @@
-123123
+@规则 
+  at-rule：@规则，@语句，CSS语句，CSS指令 都是同一个意思
+
+  1.import  导入另外一个Css文件
+    @import "路径";
+  2.charset 告诉浏览器该CSS文件，使用的字符编码集是utf-8 这个指令必须写在第一行 中文的时候最好写上
+    @charset "utf-8";
+
+web字体和图标
+  web字体(互联网字体)：解决用户电脑上没有安装相应字体的问题,当用户电脑没有安装相应字体，强制让用户下载该字体，这个东西浏览器直接下载的 
+      字体文件：在windows中是fft，这个文件可以右键安装
+  @font-face{//制作一个新字体
+      font-family:"good night";   //新字体的名字
+      src:url("字体文件的路径")
+  }
+  每次打开都下载一次
+  现在有问题了，如果下载文件，损耗时间，人们可能等不及，性能更重要，字体次要的，所以诞生了字体图标
+  一个文字就是一个图片
+  
+字体图标：我们看到的图标就是一个个字体  最好的字体图标就是iconfont.cn 阿里巴巴做的字体图标库
+  iconffont:有三种使用方式：unicode font class(有一个内样式，类名的方式) symbol(使用js的方式) 
+  //可以省略协议名  使用地是当前网页的协议
+  iconfont的@font-face中多个src为了兼容
+  content:'\e884' 表示的是字符编码
+  unicode使用地是i标签 这种方式不好阅读，需要改样式，一开始就是斜体 开发的时候用在线的，然后上线的时候在做离线的
+  
+  
+  
+svg:scalable vector graphics，可缩放的矢量图
+  1.该图片使用代码书写而成
+  2.缩放不会失真
+  3.内容轻量
+  
+  怎么使用svg：
+    svg可以嵌入浏览器，也可以单独称为一个文件
+    可以使用img标签也可以使用背景图的方式也可以使用embed元素
+    <svg xmlns="http://www.w3.org/2000/svg>  xmlns这个是命名空间
+      <rect width="100" height="100">  rect表示矩形
+      <circle/>
+    </svg>
+    矩形rect
+    圆形 circle
+    椭圆 ellipse
+    直线line
+    直线 plyine
+    多边形 polygon
+    路径  path  M:MoveTo
+    
+    详情看w3c
+    
+ 数据链接：将目标文件的数据直接书写到路径位置
+      data url
+      如何书写
+      
