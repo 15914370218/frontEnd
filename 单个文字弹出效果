@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<style>
+			.demo{
+				writing-mode:vertical-rl;
+				width:500px;
+				/*margin:0 auto;*/
+			}
+			.demo span{
+				opacity:0;
+				transition:opacity 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="demo">
+			<p>
+				<span>拔</span>
+				<span>灯</span>
+				<span>书</span>
+				<span>尽</span>
+				<span>红</span>
+				<span>曳</span>
+				<span>也，</span>
+			</p>
+			<!-- <p>
+				<span>依旧无聊，</span>
+			</p> -->
+		</div>
+		<script>
+			var colArr=['依旧无聊','梦里寒花隔玉萧'];
+			//遍历数组,遍历字符串,
+			var spanArr=document.getElementsByTagName("span");
+			for(var i=0;i<spanArr.length;i++){
+				spanArr[i].style.transitionDelay=i * 1 + 's';
+				(function(i){
+					setTimeout(function(){
+						//闭包  使用let声明i或者 let是局部变量
+						console.log(spanArr[i],i);
+						spanArr[i].style.opacity=1;
+					},30)
+				}(i));
+			}
+			
+		</script>
+	</body>
+</html>
