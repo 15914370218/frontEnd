@@ -1,1 +1,70 @@
 
+<html>
+	<head>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.wrapper {
+				position: relative;
+				width: 500px;
+				height: 500px;
+				margin: 150px auto;
+				border: 1px solid #000;
+			}
+
+			.box {
+				position: absolute;
+				left: 50px;
+				top: 58px;
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				cursor: move;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="box">
+
+			</div>
+		</div>
+		<!--拖拽-->
+		<script>
+			<!--鼠标事件(3个) 坐标-->
+			var oBox = document.getElementsByClassName("box")[0];
+			var wrap = document.getElementsByClassName("wrapper")[0];
+			oBox.addEventListener('mousedown', function(e) {
+				console.log(e);
+				var lastX = e.clientX;
+				var lastY = e.clientY;
+				//oBox.onmousemove=function(e){//不能绑定到oBox 因为快速移动的时候,会出现bug
+				document.onmousemove = function(e) {
+					var nowX = e.clientX; //浏览器的坐标
+					var nowY = e.clientY;
+					var disX = nowX - lastX;
+					var disY = nowY - lastY;
+					var left = oBox.offsetLeft + disX; //offsetLeft当前元素的坐标只
+					var top = oBox.offsetTop + disY;
+					left = left <= 0 ? 0 : left;
+					top = top <= 0 ? 0 : top;
+					left = left >= (500 - 200) ? 300 : left;
+					top = top >= (500 - 200) ? 300 : top;
+					oBox.style.left = left + 'px';
+					oBox.style.top = top + 'px';
+					lastX = nowX;
+					lastY = nowY;
+				};
+				oBox.onmouseup = function(e) {
+					document.onmousemove = null;
+				};
+			});
+			wrap.onmouseleave = function() {//移出元素框的时候取消事件
+					document.onmousemove=null;
+			}
+		</script>
+	</body>
+</html>
