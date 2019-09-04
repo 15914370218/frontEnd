@@ -1,0 +1,3 @@
+span元素为行级元素，其display默认属性为：inline； 
+当将span设置浮动float：left/right;或position:absolute;后就可以设置宽高， 
+原因是：span设置float：left/right;或position:absolute;后内部会将display属性变成：inline-block行级块元素； 
