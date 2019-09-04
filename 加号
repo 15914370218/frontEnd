@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加号方法</title>
+		<style>
+			/*第一个加号*/
+			.plus1 {
+				width: 100px;
+				height: 100px;
+				border: 1px solid #000;
+				margin: 100px auto;
+				position: relative;
+			}
+
+			.heng {
+				width: 100px;
+				height: 20px;
+				background-color: aqua;
+				position: absolute;
+				top: 50%;
+				margin-top: -10px;
+			}
+
+			.shu {
+				width: 20px;
+				height: 100px;
+				background-color: aqua;
+				position: absolute;
+				left: 50%;
+				margin-left: -10px;
+			}
+
+			/*第二个加号*/
+			.plus2 {
+				width: 100px;
+				height: 100px;
+				border: 1px solid #000;
+				margin: 100px auto;
+				position: relative;
+			}
+
+			.plus2::after {
+				content: '';
+				/*表示伪元素的内容 不能缺少*/
+				width: 100px;
+				height: 20px;
+				position: absolute;
+				background-color: aqua;
+				top: 50%;
+				margin-top: -10px;
+				left: 0px;
+				/* display:inline-block; */
+				/*伪元素默认时行级元素，不能设置宽高的*/
+			}
+
+			.plus2::before {
+				content: '';
+				width: 20px;
+				height: 100px;
+				background-color: aqua;
+				position: absolute;
+				left: 50%;
+				margin-left: -10px;
+			}
+
+			.plus2.sub::before {
+				display: none;
+			}
+
+			/*第三个加号*/
+			.plus3 {
+				/*外边框的偏移量的问题*/
+				width: 100px;
+				height: 100px;
+				border: 1px solid #000;
+				margin: 100px auto;
+				position: relative;
+				outline: 50px solid aqua;
+				outline-offset: -100px;
+				/*这个层级会比border高一点*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--一种方式 设置很多个div-->
+		<div class="plus1">
+			<!-- + -->
+			<!--不建议使用这个文字很多问题，  或者使用字体图标-->
+			<div class="heng"></div>
+			<div class="shu"></div>
+			<!--可以使用伪元素的方式-->
+		</div>
+		<div class="plus2" id="plus2">
+			
+		</div>
+		<span>333</span>
+		<div class="plus3">
+			
+		</div>
+		<script>
+			plus2.onclick = function() {
+				var classList = [].slice.call(this.classList, 0);
+				console.log(classList);
+				if (classList.indexOf('sub') > -1) {
+					this.classList.remove('sub');
+				} else {
+					this.classList.add('sub');
+				}
+			}
+		</script>
+	</body>
+</html>
