@@ -11,3 +11,5 @@ reduce()方法  可以去重累加 减少
     console.log(p,ele,i,arr);
     return p+ele
   }，10);
+
+fill()  填充数组  [].fill(1),数组中每个元素都是1
