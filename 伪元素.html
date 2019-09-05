@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪元素</title>
+		<style>
+			.demo{
+				width:100px;
+				height:100px;
+				border:1px solid #000;
+			}
+			/*伪元素不属于dom节点*/
+			/*伪类和伪元素在CSS3中进行区分，在CSS2中没有区分的很明细*/
+			/*写一个冒号也是可以的，浏览器会自动不齐全*/
+			/*伪类可以通过js实现，伪元素可以通过html子痫*/
+			/*CSS有一些特殊的方法*/
+			/*伪元素默认的显示方式是行级元素*/
+			/*content对应的值可以是文本,attr()和url()
+				文本不能是html代码
+				attr()拿到当前元素的class属性对应的值 eg:content:attr(class);
+				url()外部引入一个资源 例如在元素之前之后添加图片 content:url('1.png');
+					但是通过content引入一个图片，但是图片修改不了的  作为背景图片的方式
+				counter()计数器：在不使用列表的时候可以实现计数的功能
+			*/
+			.demo::after{
+				content:'after';
+			}
+			.demo::before{
+				content:'before';
+			}
+			
+			.demo::after{
+				content:'';/**/
+				background-image:url('1.png');
+				background-size:100% 100%;/*设置背景图片的大小*/
+			}
+			
+			/*在元素的父级定义一个计数器*/
+			/*counter-reset第一个值表示计数器的名字
+							第二个值表示从哪个值开始  不写表示从零开始
+			*/
+			body{
+				counter-reset:selector1 0;
+			}
+			
+			h1::before{
+				content:counter(selector1);
+				counter-increment:selector1;/*自增*/
+				
+			}
+				
+			h1{
+				counter-reset:selector2 1;
+			}
+			
+			h2::before{
+				/*不需要用字符串进行拼接*/
+				content:counter(selector1)'-'counter(selector2)'.';
+				counter-increment:selector2;
+			}
+			
+			h1::first-letter{
+				color:aqua;
+			}
+			/*:first-letter*//*选择第一个字符*/
+			/*first-line*//*选择的是第一行*/
+			/*backdrop*//**/
+			/*selection*//*表示选中的样式*/
+			h1::selection{/*选择的时候添加的样式*/
+				background-color:aqua;
+			}
+			h1::backdrop{/*全屏显示背景的颜色，图片，*/
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="demo">
+			demo
+		</div>
+		<h1>title1</h1>
+		<h2>title1-1</h2>
+		<h2>title1-2</h2>
+		<h3>title1-2-1</h3>
+		<h1>title2</h1>
+		<h2>title2-1</h2>
+		<script>
+				
+		</script>
+	</body>
+</html>
