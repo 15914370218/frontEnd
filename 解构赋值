@@ -1,0 +1,23 @@
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+解构赋值语法是一种javascript表达式，通过解构赋值，可以将属性/值从对象/数组种取出，赋值给其他变量
+
+数组表示
+    var x=[1,2,3,4,5];
+解构赋值使用了相同的语法，不同的是在表达式左边定义了要从原变量中取出什么变量
+    var x=[1,2,3,4,5];
+    var [y,z]=x;
+    console.log(y);//1
+    console.log(z);//2
+    
+1.变量声明并赋值时解构
+2.变量声明后赋值时的解构
+3.可以对表达式左边的数组中为任意对象预设默认值
+4.可以交换两个变量的值
+5.解析一个从函数返回的数组
+6.忽略某些返回值
+7.使用剩余模式
+
+
+
+结构对象
+    
