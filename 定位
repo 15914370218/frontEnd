@@ -1,3 +1,10 @@
 span元素为行级元素，其display默认属性为：inline； 
 当将span设置浮动float：left/right;或position:absolute;后就可以设置宽高， 
 原因是：span设置float：left/right;或position:absolute;后内部会将display属性变成：inline-block行级块元素； 
+
+static:默认的
+https://ke.qq.com/webcourse/index.html#cid=231577&term_id=100273169&taid=3850201957894297
+absolute:相对于最近的父级进行定位，如果没有则对body进行定位，会让元素脱离正常文档流，并且层级会被提高
+relative:相对于原来自身进行定位
+
+sticky:粘性：如果没有滚动条，相当于relative定位，当滚动出当前这一屏页面 相当于fixed定位（兼容性，IE不兼容）
