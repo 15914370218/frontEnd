@@ -7,4 +7,4 @@ https://ke.qq.com/webcourse/index.html#cid=231577&term_id=100273169&taid=3850201
 absolute:相对于最近的父级进行定位，如果没有则对body进行定位，会让元素脱离正常文档流，并且层级会被提高
 relative:相对于原来自身进行定位
 
-sticky:粘性：如果没有滚动条，相当于relative定位，当滚动出当前这一屏页面 相当于fixed定位（兼容性，IE不兼容）
+sticky:粘性：如果没有滚动条，相当于relative定位，当滚动出当前这一屏页面（上下，或者左右） 根据滚动条 相当于fixed定位（兼容性，IE不兼容）
