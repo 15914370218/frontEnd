@@ -1,0 +1,29 @@
+^表示开头
+$结尾
+test()属于正则表达式的方法
+String regex=/^1\d{10}1/
+
+正则表达式中一个小括号表示一个子表达式
+$1 拿到第一个子表达式的内容 
+$2 拿到第二个子表达式的内容
+$3 拿到第三个子表达式的内容
+$4 拿到第四个子表达式的内容
+let str='13209879090';
+let result=str.replace(/\d{3}\d{4}(\d{4})/),'$1****$2');$1表示子表达式中第一个小括号表达的内容
+console.log(result);
+match表示正则表达式匹配出来的内容
+str.replace(/\d{3}\d{4}(\d{4})/,function(match,$1,$2){
+  console.log(match,$1,$2);
+});
+
+str.replace(/\d{3}\d{4}(\d{4})/,function(a,b,c){
+  console.log(a,b,c);
+});
+
+g表示全局匹配，匹配多次
+let str1='document-get-by-id';
+let b=str1.replace(/-{\w}/g,function(match.$1){
+  console.log(match,$1);
+  return R1.toUpperCase();
+})
+console.log(b);
